@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Intro View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Intro View" customClass="ViewController" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,51 +19,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fridge Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="8yl-DF-Lrr">
-                                <rect key="frame" x="81" y="71" width="240" height="217"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fridgemate*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwM-0l-du4">
-                                <rect key="frame" x="111" y="302" width="180" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="20"/>
-                                <color key="textColor" red="0.95452724358974361" green="0.95452724358974361" blue="0.95452724358974361" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to continue!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm4-Px-UhX">
-                                <rect key="frame" x="139" y="372" width="124" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpM-1q-lpM">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="food-vegetables-wood-knife.jpg">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Hmw-xH-MXv" kind="show" id="mgw-yO-dwB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fridgemate*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwM-0l-du4">
+                                <rect key="frame" x="210" y="28" width="180" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm4-Px-UhX">
+                                <rect key="frame" x="175" y="250" width="250" height="100"/>
+                                <color key="backgroundColor" red="0.95452724359999996" green="0.95452724359999996" blue="0.95452724359999996" alpha="0.27750538793103446" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="1HA-4d-yNM"/>
+                                    <constraint firstAttribute="width" secondItem="Jm4-Px-UhX" secondAttribute="height" multiplier="5:2" id="nsm-oa-Cd4"/>
+                                    <constraint firstAttribute="height" constant="100" id="oxW-o2-Yo3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nsm-oa-Cd4"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LpM-1q-lpM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2vD-qo-r5H"/>
                             <constraint firstItem="LpM-1q-lpM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7dG-6T-Ghh"/>
+                            <constraint firstItem="Jm4-Px-UhX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GCU-jY-9hA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LpM-1q-lpM" secondAttribute="trailing" constant="-20" id="QzS-ib-fqQ"/>
                             <constraint firstItem="LpM-1q-lpM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="aaZ-5k-snQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LpM-1q-lpM" secondAttribute="bottom" id="ayi-ob-hgK"/>
+                            <constraint firstItem="Jm4-Px-UhX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jhE-hM-Spl"/>
                             <constraint firstItem="LpM-1q-lpM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="z2e-4s-T57"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TapToStartButton" destination="Jm4-Px-UhX" id="qbA-6c-pEc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="399"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Menu View-->
         <scene sceneID="2WK-TI-001">
             <objects>
-                <viewController id="Hmw-xH-MXv" sceneMemberID="viewController">
+                <viewController id="Hmw-xH-MXv" userLabel="Main Menu View" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hoo-A2-fEK"/>
                         <viewControllerLayoutGuide type="bottom" id="pGn-7s-80P"/>
@@ -71,12 +84,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yD1-zU-yHE">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlI-1X-uax">
+                                <rect key="frame" x="230" y="362" width="141" height="109"/>
+                                <color key="backgroundColor" red="0.42822413033207707" green="0.61690904794008194" blue="0.82149439104615385" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Shopping List">
+                                    <color key="titleColor" red="0.95452724359999996" green="0.95452724359999996" blue="0.95452724359999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hiT-mv-3Ng" kind="show" id="b0a-RN-1jB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01p-y6-kgl">
+                                <rect key="frame" x="107" y="197" width="141" height="114"/>
+                                <color key="backgroundColor" red="0.41907906646600768" green="0.532070506358155" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Recipe Search">
+                                    <color key="titleColor" red="0.95452724359999996" green="0.95452724359999996" blue="0.95452724359999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DqJ-Kx-tGg" kind="show" id="Qml-d2-nvG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6o-xi-arm">
+                                <rect key="frame" x="351" y="197" width="141" height="115"/>
+                                <color key="backgroundColor" red="0.41907906649999999" green="0.53207050639999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Recipe List">
+                                    <color key="titleColor" red="0.95452724359999996" green="0.95452724359999996" blue="0.95452724359999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LVa-Pc-kjj" kind="show" id="dgN-HJ-7XE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKq-rJ-u0Z">
+                                <rect key="frame" x="351" y="53" width="141" height="114"/>
+                                <color key="backgroundColor" red="0.41907906649999999" green="0.53207050639999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pantry Entry">
+                                    <color key="titleColor" red="0.95452724359999996" green="0.95452724359999996" blue="0.95452724359999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vMl-v4-0qL" kind="show" id="Nfv-OQ-twB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9Y-IG-dzN">
+                                <rect key="frame" x="279" y="28" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5H-mH-CAg">
+                                <rect key="frame" x="107" y="53" width="141" height="106"/>
+                                <color key="backgroundColor" red="0.4239166673972305" green="0.58926267463351656" blue="0.82149439104615385" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="My Pantry">
+                                    <color key="titleColor" red="0.95452724359999996" green="0.95452724359999996" blue="0.95452724359999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qg7-fG-rux" kind="show" id="W8O-DT-TRJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -85,8 +148,176 @@
             </objects>
             <point key="canvasLocation" x="1085" y="399"/>
         </scene>
+        <!--Current Pantry View -->
+        <scene sceneID="ZAb-cK-Rpf">
+            <objects>
+                <viewController id="qg7-fG-rux" userLabel="Current Pantry View " sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QQe-1g-okx"/>
+                        <viewControllerLayoutGuide type="bottom" id="dbz-bY-3t3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZYy-cX-R8P">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Pantry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7O-NR-xml">
+                                <rect key="frame" x="279" y="28" width="85" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyO-cU-F8i">
+                                <rect key="frame" x="0.0" y="562" width="86" height="30"/>
+                                <state key="normal" title="Main Menu"/>
+                                <connections>
+                                    <segue destination="Hmw-xH-MXv" kind="show" id="eER-TS-VEX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YNk-i3-45S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882" y="-393"/>
+        </scene>
+        <!--Pantry Entry View -->
+        <scene sceneID="WYq-Jh-gVp">
+            <objects>
+                <viewController id="vMl-v4-0qL" userLabel="Pantry Entry View " sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Zs-lK-Jzn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Muw-f1-TXU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ljp-oe-jpb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pantry Entry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nii-YN-F6h">
+                                <rect key="frame" x="279" y="20" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgr-Ci-1Pn">
+                                <rect key="frame" x="5" y="550" width="86" height="30"/>
+                                <state key="normal" title="Main Menu"/>
+                                <connections>
+                                    <segue destination="Hmw-xH-MXv" kind="show" id="DPM-qr-2jO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wiU-SP-sJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1544" y="-393"/>
+        </scene>
+        <!--Recipe Search View-->
+        <scene sceneID="B99-NG-gG7">
+            <objects>
+                <viewController id="DqJ-Kx-tGg" userLabel="Recipe Search View" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="46j-6u-346"/>
+                        <viewControllerLayoutGuide type="bottom" id="BYj-3Z-fPJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xs7-h3-vMx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tC-wg-bPD">
+                                <rect key="frame" x="279" y="28" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O5-Bk-nVd">
+                                <rect key="frame" x="6" y="562" width="86" height="30"/>
+                                <state key="normal" title="Main Menu"/>
+                                <connections>
+                                    <segue destination="Hmw-xH-MXv" kind="show" id="sLw-mu-0ei"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDc-NL-wQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2247" y="-326"/>
+        </scene>
+        <!--Recipe List View-->
+        <scene sceneID="bbU-aj-9vY">
+            <objects>
+                <viewController id="LVa-Pc-kjj" userLabel="Recipe List View" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XAS-SE-qIQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="sno-2I-Rjp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7GW-Nd-r3t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sb4-EH-3yT">
+                                <rect key="frame" x="279" y="20" width="88" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnJ-by-FH4">
+                                <rect key="frame" x="20" y="550" width="86" height="30"/>
+                                <state key="normal" title="Main Menu"/>
+                                <connections>
+                                    <segue destination="Hmw-xH-MXv" kind="show" id="Ck8-sE-7Nz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWm-ri-znz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2139" y="1048"/>
+        </scene>
+        <!--Shopping List View-->
+        <scene sceneID="3Cb-uZ-N9k">
+            <objects>
+                <viewController id="hiT-mv-3Ng" userLabel="Shopping List View" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4kl-AN-Iah"/>
+                        <viewControllerLayoutGuide type="bottom" id="YcB-jD-jHa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fkO-1o-rg9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shopping List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93H-Cc-i2k">
+                                <rect key="frame" x="279" y="20" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvH-AD-zm3">
+                                <rect key="frame" x="20" y="550" width="86" height="30"/>
+                                <state key="normal" title="Main Menu"/>
+                                <connections>
+                                    <segue destination="Hmw-xH-MXv" kind="show" id="fMe-LV-2Yu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Et2-br-vXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2187" y="374"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="fridge Icon.png" width="219" height="230"/>
+        <image name="food-vegetables-wood-knife.jpg" width="3774" height="2526"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mgw-yO-dwB"/>
+    </inferredMetricsTieBreakers>
 </document>
