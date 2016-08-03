@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		873687AA96D5C96EF632BC14 /* Pods_Fridgemate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA8ED079C38FDFE08944254 /* Pods_Fridgemate.framework */; };
 		DD0400121D38242C001AA22D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0400111D38242C001AA22D /* AppDelegate.swift */; };
 		DD0400141D38242C001AA22D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0400131D38242C001AA22D /* ViewController.swift */; };
 		DD0400171D38242C001AA22D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0400151D38242C001AA22D /* Main.storyboard */; };
@@ -17,9 +18,11 @@
 		DD5C45661D49B0640099DFA1 /* fridgemate photo 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DD5C45621D49B0640099DFA1 /* fridgemate photo 3.jpeg */; };
 		DD5C45671D49B0640099DFA1 /* pexels-photo-128391.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DD5C45631D49B0640099DFA1 /* pexels-photo-128391.jpeg */; };
 		DD5C45681D49B0640099DFA1 /* food-vegetables-wood-knife.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD5C45641D49B0640099DFA1 /* food-vegetables-wood-knife.jpg */; };
+		DD854B741D512758001A8B6C /* RecipeSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD854B731D512758001A8B6C /* RecipeSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BEA8ED079C38FDFE08944254 /* Pods_Fridgemate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fridgemate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD04000E1D38242C001AA22D /* Fridgemate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fridgemate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0400111D38242C001AA22D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD0400131D38242C001AA22D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +35,9 @@
 		DD5C45621D49B0640099DFA1 /* fridgemate photo 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fridgemate photo 3.jpeg"; sourceTree = "<group>"; };
 		DD5C45631D49B0640099DFA1 /* pexels-photo-128391.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pexels-photo-128391.jpeg"; sourceTree = "<group>"; };
 		DD5C45641D49B0640099DFA1 /* food-vegetables-wood-knife.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "food-vegetables-wood-knife.jpg"; sourceTree = "<group>"; };
+		DD854B731D512758001A8B6C /* RecipeSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSetup.swift; sourceTree = "<group>"; };
+		E7B6A4593EAB93CA8FB9D9AD /* Pods-Fridgemate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fridgemate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate.debug.xcconfig"; sourceTree = "<group>"; };
+		EAFCB5D43E103AB30B7D2351 /* Pods-Fridgemate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fridgemate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				873687AA96D5C96EF632BC14 /* Pods_Fridgemate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		103D840528DED7DC579A2473 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7B6A4593EAB93CA8FB9D9AD /* Pods-Fridgemate.debug.xcconfig */,
+				EAFCB5D43E103AB30B7D2351 /* Pods-Fridgemate.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA085E5CB92F196B2DEAC24E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEA8ED079C38FDFE08944254 /* Pods_Fridgemate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DD0400051D38242C001AA22D = {
 			isa = PBXGroup;
 			children = (
 				DD0400101D38242C001AA22D /* Fridgemate */,
 				DD04000F1D38242C001AA22D /* Products */,
+				103D840528DED7DC579A2473 /* Pods */,
+				DA085E5CB92F196B2DEAC24E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +101,7 @@
 				DD0400181D38242C001AA22D /* Assets.xcassets */,
 				DD04001A1D38242C001AA22D /* LaunchScreen.storyboard */,
 				DD04001D1D38242C001AA22D /* Info.plist */,
+				DD854B731D512758001A8B6C /* RecipeSetup.swift */,
 			);
 			path = Fridgemate;
 			sourceTree = "<group>";
@@ -86,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD0400201D38242C001AA22D /* Build configuration list for PBXNativeTarget "Fridgemate" */;
 			buildPhases = (
+				01A03F05430A58518B844F2F /* [CP] Check Pods Manifest.lock */,
 				DD04000A1D38242C001AA22D /* Sources */,
 				DD04000B1D38242C001AA22D /* Frameworks */,
 				DD04000C1D38242C001AA22D /* Resources */,
+				68801C705978483FED6DAD5E /* [CP] Embed Pods Frameworks */,
+				9A3A8F0DA05EB7A605A36760 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,11 +180,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01A03F05430A58518B844F2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		68801C705978483FED6DAD5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A3A8F0DA05EB7A605A36760 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD04000A1D38242C001AA22D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD854B741D512758001A8B6C /* RecipeSetup.swift in Sources */,
 				DD0400141D38242C001AA22D /* ViewController.swift in Sources */,
 				DD0400121D38242C001AA22D /* AppDelegate.swift in Sources */,
 			);
@@ -267,6 +346,7 @@
 		};
 		DD0400211D38242C001AA22D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7B6A4593EAB93CA8FB9D9AD /* Pods-Fridgemate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Fridgemate/Info.plist;
@@ -278,6 +358,7 @@
 		};
 		DD0400221D38242C001AA22D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAFCB5D43E103AB30B7D2351 /* Pods-Fridgemate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Fridgemate/Info.plist;

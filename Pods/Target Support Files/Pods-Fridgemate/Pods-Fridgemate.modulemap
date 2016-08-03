@@ -1,0 +1,6 @@
+framework module Pods_Fridgemate {
+  umbrella header "Pods-Fridgemate-umbrella.h"
+
+  export *
+  module * { export * }
+}

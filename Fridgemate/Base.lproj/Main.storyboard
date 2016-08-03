@@ -21,29 +21,42 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpM-1q-lpM">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <state key="normal" backgroundImage="food-vegetables-wood-knife.jpg">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="2iM-ve-Lde"/>
+                                    <constraint firstAttribute="width" constant="600" id="bmL-9E-tkC"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="fridgemate photo 3.jpeg">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Hmw-xH-MXv" kind="show" id="mgw-yO-dwB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fridgemate*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwM-0l-du4">
-                                <rect key="frame" x="210" y="28" width="180" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fridgemate*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwM-0l-du4">
+                                <rect key="frame" x="120" y="40" width="186" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JwM-0l-du4" secondAttribute="height" multiplier="6:1" id="m5F-Jk-IIl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="26"/>
+                                <color key="textColor" red="0.16862745100000001" green="0.28627450980000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm4-Px-UhX">
-                                <rect key="frame" x="175" y="250" width="250" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap to Continue!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm4-Px-UhX">
+                                <rect key="frame" x="104" y="250" width="361" height="100"/>
                                 <color key="backgroundColor" red="0.95452724359999996" green="0.95452724359999996" blue="0.95452724359999996" alpha="0.27750538793103446" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="1HA-4d-yNM"/>
+                                    <constraint firstAttribute="width" constant="310" id="1HA-4d-yNM"/>
                                     <constraint firstAttribute="width" secondItem="Jm4-Px-UhX" secondAttribute="height" multiplier="5:2" id="nsm-oa-Cd4"/>
                                     <constraint firstAttribute="height" constant="100" id="oxW-o2-Yo3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
+                                <color key="textColor" red="1" green="0.80377382933990449" blue="0.14309730597236381" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -57,7 +70,10 @@
                             <constraint firstItem="LpM-1q-lpM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2vD-qo-r5H"/>
                             <constraint firstItem="LpM-1q-lpM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7dG-6T-Ghh"/>
                             <constraint firstItem="Jm4-Px-UhX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GCU-jY-9hA"/>
+                            <constraint firstItem="JwM-0l-du4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="O6v-0s-fe9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LpM-1q-lpM" secondAttribute="trailing" constant="-20" id="QzS-ib-fqQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JwM-0l-du4" secondAttribute="trailing" constant="100" id="TYg-OO-Vff"/>
+                            <constraint firstItem="JwM-0l-du4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Yxh-Ri-Iyy"/>
                             <constraint firstItem="LpM-1q-lpM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="aaZ-5k-snQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LpM-1q-lpM" secondAttribute="bottom" id="ayi-ob-hgK"/>
                             <constraint firstItem="Jm4-Px-UhX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jhE-hM-Spl"/>
@@ -84,74 +100,150 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlI-1X-uax">
-                                <rect key="frame" x="230" y="362" width="141" height="109"/>
-                                <color key="backgroundColor" red="0.42822413033207707" green="0.61690904794008194" blue="0.82149439104615385" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlI-1X-uax">
+                                <rect key="frame" x="130" y="485" width="141" height="75"/>
+                                <color key="backgroundColor" red="0.81176470588235294" green="0.45490196078431372" blue="0.14509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="LKX-PU-BFp"/>
+                                    <constraint firstAttribute="height" constant="75" id="zLV-a9-Hzs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Shopping List">
-                                    <color key="titleColor" red="0.95452724359999996" green="0.95452724359999996" blue="0.95452724359999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.098039215686274508" green="0.13333333333333333" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="hiT-mv-3Ng" kind="show" id="b0a-RN-1jB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01p-y6-kgl">
-                                <rect key="frame" x="107" y="197" width="141" height="114"/>
-                                <color key="backgroundColor" red="0.41907906646600768" green="0.532070506358155" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01p-y6-kgl">
+                                <rect key="frame" x="40" y="390" width="141" height="75"/>
+                                <color key="backgroundColor" red="0.81176470588235294" green="0.40392156862745099" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="L4Z-bZ-8rG"/>
+                                    <constraint firstAttribute="width" constant="141" id="VOe-0r-B6H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Recipe Search">
-                                    <color key="titleColor" red="0.95452724359999996" green="0.95452724359999996" blue="0.95452724359999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="DqJ-Kx-tGg" kind="show" id="Qml-d2-nvG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6o-xi-arm">
-                                <rect key="frame" x="351" y="197" width="141" height="115"/>
-                                <color key="backgroundColor" red="0.41907906649999999" green="0.53207050639999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6o-xi-arm">
+                                <rect key="frame" x="419" y="390" width="141" height="75"/>
+                                <color key="backgroundColor" red="0.84075108408748123" green="0.41989592962755723" blue="0.13606410775928907" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="XAo-sy-FBf"/>
+                                    <constraint firstAttribute="width" constant="141" id="j7X-gS-Pr5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Recipe List">
-                                    <color key="titleColor" red="0.95452724359999996" green="0.95452724359999996" blue="0.95452724359999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="LVa-Pc-kjj" kind="show" id="dgN-HJ-7XE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKq-rJ-u0Z">
-                                <rect key="frame" x="351" y="53" width="141" height="114"/>
-                                <color key="backgroundColor" red="0.41907906649999999" green="0.53207050639999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKq-rJ-u0Z">
+                                <rect key="frame" x="419" y="295" width="141" height="75"/>
+                                <color key="backgroundColor" red="0.79607843137254897" green="0.49803921568627452" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="A7G-Jj-Kpc"/>
+                                    <constraint firstAttribute="height" constant="75" id="aDy-4Z-mEk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Pantry Entry">
-                                    <color key="titleColor" red="0.95452724359999996" green="0.95452724359999996" blue="0.95452724359999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="vMl-v4-0qL" kind="show" id="Nfv-OQ-twB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9Y-IG-dzN">
-                                <rect key="frame" x="279" y="28" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5H-mH-CAg">
-                                <rect key="frame" x="107" y="53" width="141" height="106"/>
-                                <color key="backgroundColor" red="0.4239166673972305" green="0.58926267463351656" blue="0.82149439104615385" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5H-mH-CAg">
+                                <rect key="frame" x="40" y="295" width="141" height="75"/>
+                                <color key="backgroundColor" red="0.8554911387631976" green="0.48658133565948464" blue="0.16132946849084012" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="vHF-vx-CAA"/>
+                                    <constraint firstAttribute="height" constant="75" id="zcf-gP-pNy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="My Pantry">
-                                    <color key="titleColor" red="0.95452724359999996" green="0.95452724359999996" blue="0.95452724359999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="qg7-fG-rux" kind="show" id="W8O-DT-TRJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Main Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9Y-IG-dzN">
+                                <rect key="frame" x="120" y="28" width="360" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" red="0.16862745100000001" green="0.28627450980000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fridgemate photo 2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IVr-Xr-c7c">
+                                <rect key="frame" x="90" y="90" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="310" id="X78-X7-xpg"/>
+                                    <constraint firstAttribute="width" constant="240" id="zvL-ZB-eNA"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.45698293740573159" green="0.079685221026985414" blue="0.10537678571170545" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TlI-1X-uax" firstAttribute="top" secondItem="l6o-xi-arm" secondAttribute="bottom" constant="20" id="0ar-GV-I1g"/>
+                            <constraint firstItem="m5H-mH-CAg" firstAttribute="leading" secondItem="VgI-ha-QK1" secondAttribute="leadingMargin" constant="20" id="8kl-hs-bNp"/>
+                            <constraint firstItem="m5H-mH-CAg" firstAttribute="top" secondItem="IVr-Xr-c7c" secondAttribute="bottom" constant="40" id="93w-7g-7PM"/>
+                            <constraint firstItem="l6o-xi-arm" firstAttribute="top" secondItem="bKq-rJ-u0Z" secondAttribute="bottom" constant="20" id="Bfj-uY-e2u"/>
+                            <constraint firstItem="IVr-Xr-c7c" firstAttribute="leading" secondItem="VgI-ha-QK1" secondAttribute="leadingMargin" constant="20" id="OoT-UV-nmR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IVr-Xr-c7c" secondAttribute="trailing" constant="20" id="RPP-6y-mWz"/>
+                            <constraint firstItem="K9Y-IG-dzN" firstAttribute="top" secondItem="VgI-ha-QK1" secondAttribute="topMargin" constant="30" id="T6k-mM-u28"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l6o-xi-arm" secondAttribute="trailing" constant="20" id="Veh-JN-8SZ"/>
+                            <constraint firstItem="TlI-1X-uax" firstAttribute="leading" secondItem="VgI-ha-QK1" secondAttribute="leadingMargin" constant="110" id="aeu-X7-Wc3"/>
+                            <constraint firstItem="01p-y6-kgl" firstAttribute="top" secondItem="m5H-mH-CAg" secondAttribute="bottom" constant="20" id="gTK-o9-GmV"/>
+                            <constraint firstItem="TlI-1X-uax" firstAttribute="top" secondItem="01p-y6-kgl" secondAttribute="bottom" constant="20" id="jL9-1d-uOx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K9Y-IG-dzN" secondAttribute="trailing" constant="100" id="oFU-vy-YXd"/>
+                            <constraint firstItem="pGn-7s-80P" firstAttribute="top" secondItem="TlI-1X-uax" secondAttribute="bottom" constant="40" id="ont-Jk-MIN"/>
+                            <constraint firstItem="01p-y6-kgl" firstAttribute="leading" secondItem="VgI-ha-QK1" secondAttribute="leadingMargin" constant="20" id="pbT-4G-0tI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bKq-rJ-u0Z" secondAttribute="trailing" constant="20" id="rCZ-GL-wII"/>
+                            <constraint firstItem="K9Y-IG-dzN" firstAttribute="leading" secondItem="VgI-ha-QK1" secondAttribute="leadingMargin" constant="100" id="wRy-lz-tTT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnH-uV-i0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1085" y="399"/>
+            <point key="canvasLocation" x="1107" y="477"/>
         </scene>
         <!--Current Pantry View -->
         <scene sceneID="ZAb-cK-Rpf">
             <objects>
-                <viewController id="qg7-fG-rux" userLabel="Current Pantry View " sceneMemberID="viewController">
+                <viewController id="qg7-fG-rux" userLabel="Current Pantry View " customClass="ViewController" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QQe-1g-okx"/>
                         <viewControllerLayoutGuide type="bottom" id="dbz-bY-3t3"/>
@@ -160,22 +252,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Pantry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7O-NR-xml">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="My Pantry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7O-NR-xml">
                                 <rect key="frame" x="279" y="28" width="85" height="29"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.74117647058823533" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Fuh-zt-P8K"/>
+                                    <constraint firstAttribute="width" constant="85" id="iL0-XW-1uH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.16862745098039217" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyO-cU-F8i">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyO-cU-F8i">
                                 <rect key="frame" x="0.0" y="562" width="86" height="30"/>
-                                <state key="normal" title="Main Menu"/>
+                                <color key="backgroundColor" red="0.85651513009049773" green="0.53521438832547041" blue="0.18974303997551253" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="Hgt-HL-g64"/>
+                                    <constraint firstAttribute="height" constant="30" id="bR0-tK-xiH"/>
+                                </constraints>
+                                <state key="normal" title="Main Menu">
+                                    <color key="titleColor" red="0.16862745098039217" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Hmw-xH-MXv" kind="show" id="eER-TS-VEX"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pWP-z1-FWZ">
+                                <rect key="frame" x="20" y="65" width="299" height="457"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.5" green="0.11262101764450294" blue="0.1219840728274556" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pWP-z1-FWZ" firstAttribute="top" secondItem="b7O-NR-xml" secondAttribute="bottom" constant="20" id="Czn-Cg-ZGL"/>
+                            <constraint firstItem="dbz-bY-3t3" firstAttribute="top" secondItem="gyO-cU-F8i" secondAttribute="bottom" constant="8" id="EwP-Lq-fLh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b7O-NR-xml" secondAttribute="trailing" constant="100" id="MKg-hH-JxY"/>
+                            <constraint firstItem="gyO-cU-F8i" firstAttribute="top" secondItem="pWP-z1-FWZ" secondAttribute="bottom" constant="40" id="faC-D3-3GB"/>
+                            <constraint firstItem="b7O-NR-xml" firstAttribute="leading" secondItem="ZYy-cX-R8P" secondAttribute="leadingMargin" constant="100" id="hVp-3w-hZl"/>
+                            <constraint firstItem="gyO-cU-F8i" firstAttribute="leading" secondItem="ZYy-cX-R8P" secondAttribute="leadingMargin" constant="10" id="lOi-rN-9aY"/>
+                            <constraint firstItem="pWP-z1-FWZ" firstAttribute="leading" secondItem="ZYy-cX-R8P" secondAttribute="leadingMargin" constant="30" id="sIS-1n-TnV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myPantryTextField" destination="pWP-z1-FWZ" id="kvC-kU-v2x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNk-i3-45S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,7 +306,7 @@
         <!--Pantry Entry View -->
         <scene sceneID="WYq-Jh-gVp">
             <objects>
-                <viewController id="vMl-v4-0qL" userLabel="Pantry Entry View " sceneMemberID="viewController">
+                <viewController id="vMl-v4-0qL" userLabel="Pantry Entry View " customClass="ViewController" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Zs-lK-Jzn"/>
                         <viewControllerLayoutGuide type="bottom" id="Muw-f1-TXU"/>
@@ -193,22 +315,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pantry Entry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nii-YN-F6h">
-                                <rect key="frame" x="279" y="20" width="98" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pantry Entry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nii-YN-F6h">
+                                <rect key="frame" x="268" y="20" width="109" height="27"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.69019607843137254" blue="0.35294117647058826" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.16862745098039217" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgr-Ci-1Pn">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgr-Ci-1Pn">
                                 <rect key="frame" x="5" y="550" width="86" height="30"/>
-                                <state key="normal" title="Main Menu"/>
+                                <color key="backgroundColor" red="0.83921568627450982" green="0.56862745098039214" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Main Menu">
+                                    <color key="titleColor" red="0.16862745098039217" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Hmw-xH-MXv" kind="show" id="DPM-qr-2jO"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3i0-m2-sIC">
+                                <rect key="frame" x="201" y="229" width="206" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZh-ug-JXO">
+                                <rect key="frame" x="170" y="399" width="260" height="30"/>
+                                <color key="backgroundColor" red="0.87450980392156863" green="0.63137254901960782" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="My Pantry">
+                                    <color key="titleColor" red="0.16862745098039217" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qg7-fG-rux" kind="show" id="sZg-cH-8dt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBN-RR-YFv">
+                                <rect key="frame" x="415" y="228" width="57" height="30"/>
+                                <color key="backgroundColor" red="0.2754164671943341" green="0.64550210406174968" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add +">
+                                    <color key="titleColor" red="0.27857305741344929" green="0.34168916392480025" blue="0.41035657051282048" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addIngredient:" destination="vMl-v4-0qL" eventType="touchUpInside" id="f7f-Ow-T3b"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.42352941176470588" green="0.070588235294117646" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="nii-YN-F6h" secondAttribute="trailing" constant="100" id="3LJ-ps-LjC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GBN-RR-YFv" secondAttribute="trailing" constant="40" id="8zn-eP-Hbz"/>
+                            <constraint firstItem="cgr-Ci-1Pn" firstAttribute="leading" secondItem="Ljp-oe-jpb" secondAttribute="leadingMargin" constant="10" id="Dm4-n1-lHD"/>
+                            <constraint firstItem="Muw-f1-TXU" firstAttribute="top" secondItem="cgr-Ci-1Pn" secondAttribute="bottom" constant="10" id="JrP-i5-oHa"/>
+                            <constraint firstItem="xZh-ug-JXO" firstAttribute="leading" secondItem="Ljp-oe-jpb" secondAttribute="leadingMargin" constant="150" id="Rba-8d-AWk"/>
+                            <constraint firstItem="xZh-ug-JXO" firstAttribute="top" secondItem="3i0-m2-sIC" secondAttribute="bottom" constant="270" id="UB7-lF-LLb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xZh-ug-JXO" secondAttribute="trailing" constant="150" id="eHf-P7-QjJ"/>
+                            <constraint firstItem="GBN-RR-YFv" firstAttribute="leading" secondItem="3i0-m2-sIC" secondAttribute="trailing" constant="300" id="fil-ff-3Q9"/>
+                            <constraint firstItem="3i0-m2-sIC" firstAttribute="leading" secondItem="Ljp-oe-jpb" secondAttribute="leadingMargin" constant="10" id="h5k-ZF-ZPu"/>
+                            <constraint firstItem="Muw-f1-TXU" firstAttribute="top" secondItem="xZh-ug-JXO" secondAttribute="bottom" constant="171" id="ies-xU-oPa"/>
+                            <constraint firstItem="GBN-RR-YFv" firstAttribute="leading" secondItem="3i0-m2-sIC" secondAttribute="trailing" constant="8" id="nFH-Kt-fZ6"/>
+                            <constraint firstItem="nii-YN-F6h" firstAttribute="leading" secondItem="Ljp-oe-jpb" secondAttribute="leadingMargin" constant="100" id="rmQ-yg-Kud"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addIngredientButton" destination="GBN-RR-YFv" id="H0e-3W-2ky"/>
+                        <outlet property="addIngredientTextField" destination="3i0-m2-sIC" id="JiR-HO-ak8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiU-SP-sJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,21 +395,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tC-wg-bPD">
-                                <rect key="frame" x="279" y="28" width="128" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O5-Bk-nVd">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O5-Bk-nVd">
                                 <rect key="frame" x="6" y="562" width="86" height="30"/>
-                                <state key="normal" title="Main Menu"/>
+                                <color key="backgroundColor" red="0.74509803921568629" green="0.42352941176470588" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Main Menu">
+                                    <color key="titleColor" red="0.16862745098039217" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Hmw-xH-MXv" kind="show" id="sLw-mu-0ei"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avl-fg-K7r">
+                                <rect key="frame" x="100" y="305" width="156" height="38"/>
+                                <color key="backgroundColor" red="0.83921568627450982" green="0.56862745098039214" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Search by Keyword">
+                                    <color key="titleColor" red="0.16862745098039217" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LVa-Pc-kjj" kind="show" id="Vfa-aT-vmc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2O-eh-u3x">
+                                <rect key="frame" x="277" y="305" width="154" height="34"/>
+                                <color key="backgroundColor" red="0.79607843137254897" green="0.49803921568627452" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Search by Pantry">
+                                    <color key="titleColor" red="0.16862745098039217" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LVa-Pc-kjj" kind="show" id="AiH-U8-7H5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxO-0e-A96">
+                                <rect key="frame" x="160" y="382" width="199" height="40"/>
+                                <color key="backgroundColor" red="0.79607843137254897" green="0.49803921568627452" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Search by Ingredients">
+                                    <color key="titleColor" red="0.16862745098039217" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LVa-Pc-kjj" kind="show" id="xfd-gZ-aBF"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jIX-ll-Ipn">
+                                <rect key="frame" x="109" y="249" width="303" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Recipe Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tC-wg-bPD">
+                                <rect key="frame" x="196" y="28" width="153" height="33"/>
+                                <color key="backgroundColor" red="0.83921568627450982" green="0.56862745098039214" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.16862745098039217" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.4526748680241327" green="0.059618348334105682" blue="0.10208858804450845" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9tC-wg-bPD" firstAttribute="leading" secondItem="xs7-h3-vMx" secondAttribute="leadingMargin" constant="100" id="8Gj-eM-bpD"/>
+                            <constraint firstItem="BYj-3Z-fPJ" firstAttribute="top" secondItem="0O5-Bk-nVd" secondAttribute="bottom" constant="10" id="TYV-NA-dkh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9tC-wg-bPD" secondAttribute="trailing" constant="100" id="VdP-Ii-3Vh"/>
+                            <constraint firstItem="0O5-Bk-nVd" firstAttribute="leading" secondItem="xs7-h3-vMx" secondAttribute="leadingMargin" constant="10" id="b3U-rN-YrK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDc-NL-wQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,26 +473,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sb4-EH-3yT">
-                                <rect key="frame" x="279" y="20" width="88" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sb4-EH-3yT">
+                                <rect key="frame" x="279" y="20" width="111" height="39"/>
+                                <color key="backgroundColor" red="0.68627450980392157" green="0.34509803921568627" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.098039215686274508" green="0.16078431372549021" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnJ-by-FH4">
                                 <rect key="frame" x="20" y="550" width="86" height="30"/>
-                                <state key="normal" title="Main Menu"/>
+                                <color key="backgroundColor" red="0.68627450980392157" green="0.34509803921568627" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Main Menu">
+                                    <color key="titleColor" red="0.12941176470588237" green="0.2196078431372549" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Hmw-xH-MXv" kind="show" id="Ck8-sE-7Nz"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HvO-tK-6uf">
+                                <rect key="frame" x="57" y="100" width="509" height="428"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">"results": [
+    {
+      "id": 23657,
+      "usedIngredientCount": 4,
+      "missedIngredientCount": 2,
+      "likes": 0,
+      "title": "Braised Eggplant with Onion and Tomato",
+      "image": "https://spoonacular.com/recipeImages/braised-eggplant-with-onion-and-tomato-2-23657.jpg",
+      "imageType": "jpg"
+    },
+    {
+      "id": 23958,
+      "usedIngredientCount": 4,
+      "missedIngredientCount": 2,
+      "likes": 0,
+      "title": "Bohemienne",
+      "image": "https://spoonacular.com/recipeImages/bohemienne-23958.jpg",
+      "imageType": "jpg"
+    },
+    {
+      "id": 23568,</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.3411764705882353" green="0.0" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWm-ri-znz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2139" y="1048"/>
+            <point key="canvasLocation" x="2211" y="384"/>
         </scene>
         <!--Shopping List View-->
         <scene sceneID="3Cb-uZ-N9k">
@@ -292,32 +537,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shopping List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93H-Cc-i2k">
-                                <rect key="frame" x="279" y="20" width="131" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Shopping List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93H-Cc-i2k">
+                                <rect key="frame" x="279" y="20" width="148" height="32"/>
+                                <color key="backgroundColor" red="0.85651513010000002" green="0.53521438830000001" blue="0.18974304" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.19607843137254902" green="0.18823529411764706" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvH-AD-zm3">
                                 <rect key="frame" x="20" y="550" width="86" height="30"/>
-                                <state key="normal" title="Main Menu"/>
+                                <color key="backgroundColor" red="0.85651513010000002" green="0.53521438830000001" blue="0.18974304" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Main Menu">
+                                    <color key="titleColor" red="0.1960784314" green="0.18823529410000001" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Hmw-xH-MXv" kind="show" id="fMe-LV-2Yu"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cpp-hi-tuz">
+                                <rect key="frame" x="20" y="73" width="237" height="429"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">
+Missing ingredients added:
+
+Buttermilk
+Butter
+Ravioli
+Fettuccini 
+Oregano
+Rosemary
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.42717642345399698" green="0.021436840514434272" blue="0.097918295265826946" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="93H-Cc-i2k" firstAttribute="leading" secondItem="fkO-1o-rg9" secondAttribute="leadingMargin" constant="100" id="G7h-Kt-nHu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="93H-Cc-i2k" secondAttribute="trailing" constant="100" id="GuA-ZT-Vmy"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Et2-br-vXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2187" y="374"/>
+            <point key="canvasLocation" x="2045" y="1276"/>
         </scene>
     </scenes>
     <resources>
-        <image name="food-vegetables-wood-knife.jpg" width="3774" height="2526"/>
+        <image name="fridgemate photo 2.jpg" width="3373" height="2238"/>
+        <image name="fridgemate photo 3.jpeg" width="5184" height="3456"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mgw-yO-dwB"/>
+        <segue reference="W8O-DT-TRJ"/>
+        <segue reference="dgN-HJ-7XE"/>
     </inferredMetricsTieBreakers>
 </document>
