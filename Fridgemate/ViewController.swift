@@ -10,28 +10,9 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class ViewController: UIViewController,UITableViewDataSource {
+class ViewController: UIViewController{
     
-    
-    
-    
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        myPantryArray = userDefaults.objectForKey("pantryList") as! [String]
-        return myPantryArray.count
-    }
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        myPantryArray = userDefaults.objectForKey("pantryList") as! [String]
-        var cell = UITableViewCell()
-        let pantryList = myPantryArray[indexPath.row]
-        cell.textLabel?.text = pantryList
-        return cell
-        
-    }
+
     
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
@@ -64,6 +45,8 @@ class ViewController: UIViewController,UITableViewDataSource {
     @IBAction func clearIngredientList(sender: AnyObject) {
         myPantryArray = []
         userDefaults.setObject(myPantryArray, forKey: "pantryList")
+    //RecipeListView
+        var recipeList:[String] = []
         
     }
     
@@ -105,7 +88,7 @@ class ViewController: UIViewController,UITableViewDataSource {
                     }
                     print()
                     print("____________________")
-                    print(recipeArray)
+                    //print(recipeArray)
                 }
                 
             case .Failure(let error):

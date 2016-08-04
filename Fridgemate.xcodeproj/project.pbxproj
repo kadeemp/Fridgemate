@@ -13,12 +13,8 @@
 		DD0400171D38242C001AA22D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0400151D38242C001AA22D /* Main.storyboard */; };
 		DD0400191D38242C001AA22D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD0400181D38242C001AA22D /* Assets.xcassets */; };
 		DD04001C1D38242C001AA22D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD04001A1D38242C001AA22D /* LaunchScreen.storyboard */; };
-		DD0400241D3828AE001AA22D /* fridge Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0400231D3828AE001AA22D /* fridge Icon.png */; };
-		DD5C45651D49B0640099DFA1 /* fridgemate photo 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD5C45611D49B0640099DFA1 /* fridgemate photo 2.jpg */; };
-		DD5C45661D49B0640099DFA1 /* fridgemate photo 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DD5C45621D49B0640099DFA1 /* fridgemate photo 3.jpeg */; };
-		DD5C45671D49B0640099DFA1 /* pexels-photo-128391.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DD5C45631D49B0640099DFA1 /* pexels-photo-128391.jpeg */; };
-		DD5C45681D49B0640099DFA1 /* food-vegetables-wood-knife.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD5C45641D49B0640099DFA1 /* food-vegetables-wood-knife.jpg */; };
 		DD854B741D512758001A8B6C /* RecipeSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD854B731D512758001A8B6C /* RecipeSetup.swift */; };
+		DD854B761D53B8D2001A8B6C /* myPantryClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD854B751D53B8D1001A8B6C /* myPantryClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +26,8 @@
 		DD0400181D38242C001AA22D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD04001B1D38242C001AA22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD04001D1D38242C001AA22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD0400231D3828AE001AA22D /* fridge Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fridge Icon.png"; sourceTree = "<group>"; };
-		DD5C45611D49B0640099DFA1 /* fridgemate photo 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fridgemate photo 2.jpg"; sourceTree = "<group>"; };
-		DD5C45621D49B0640099DFA1 /* fridgemate photo 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fridgemate photo 3.jpeg"; sourceTree = "<group>"; };
-		DD5C45631D49B0640099DFA1 /* pexels-photo-128391.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pexels-photo-128391.jpeg"; sourceTree = "<group>"; };
-		DD5C45641D49B0640099DFA1 /* food-vegetables-wood-knife.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "food-vegetables-wood-knife.jpg"; sourceTree = "<group>"; };
 		DD854B731D512758001A8B6C /* RecipeSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSetup.swift; sourceTree = "<group>"; };
+		DD854B751D53B8D1001A8B6C /* myPantryClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPantryClass.swift; sourceTree = "<group>"; };
 		E7B6A4593EAB93CA8FB9D9AD /* Pods-Fridgemate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fridgemate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate.debug.xcconfig"; sourceTree = "<group>"; };
 		EAFCB5D43E103AB30B7D2351 /* Pods-Fridgemate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fridgemate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,18 +82,14 @@
 		DD0400101D38242C001AA22D /* Fridgemate */ = {
 			isa = PBXGroup;
 			children = (
-				DD5C45611D49B0640099DFA1 /* fridgemate photo 2.jpg */,
-				DD5C45621D49B0640099DFA1 /* fridgemate photo 3.jpeg */,
-				DD5C45631D49B0640099DFA1 /* pexels-photo-128391.jpeg */,
-				DD5C45641D49B0640099DFA1 /* food-vegetables-wood-knife.jpg */,
 				DD0400111D38242C001AA22D /* AppDelegate.swift */,
 				DD0400131D38242C001AA22D /* ViewController.swift */,
+				DD854B751D53B8D1001A8B6C /* myPantryClass.swift */,
+				DD854B731D512758001A8B6C /* RecipeSetup.swift */,
 				DD0400151D38242C001AA22D /* Main.storyboard */,
-				DD0400231D3828AE001AA22D /* fridge Icon.png */,
 				DD0400181D38242C001AA22D /* Assets.xcassets */,
 				DD04001A1D38242C001AA22D /* LaunchScreen.storyboard */,
 				DD04001D1D38242C001AA22D /* Info.plist */,
-				DD854B731D512758001A8B6C /* RecipeSetup.swift */,
 			);
 			path = Fridgemate;
 			sourceTree = "<group>";
@@ -167,12 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD0400241D3828AE001AA22D /* fridge Icon.png in Resources */,
 				DD04001C1D38242C001AA22D /* LaunchScreen.storyboard in Resources */,
-				DD5C45661D49B0640099DFA1 /* fridgemate photo 3.jpeg in Resources */,
-				DD5C45651D49B0640099DFA1 /* fridgemate photo 2.jpg in Resources */,
-				DD5C45681D49B0640099DFA1 /* food-vegetables-wood-knife.jpg in Resources */,
-				DD5C45671D49B0640099DFA1 /* pexels-photo-128391.jpeg in Resources */,
 				DD0400191D38242C001AA22D /* Assets.xcassets in Resources */,
 				DD0400171D38242C001AA22D /* Main.storyboard in Resources */,
 			);
@@ -233,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD854B761D53B8D2001A8B6C /* myPantryClass.swift in Sources */,
 				DD854B741D512758001A8B6C /* RecipeSetup.swift in Sources */,
 				DD0400141D38242C001AA22D /* ViewController.swift in Sources */,
 				DD0400121D38242C001AA22D /* AppDelegate.swift in Sources */,
