@@ -10,7 +10,31 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDataSource {
+    
+    
+    
+    
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        myPantryArray = userDefaults.objectForKey("pantryList") as! [String]
+        return myPantryArray.count
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        myPantryArray = userDefaults.objectForKey("pantryList") as! [String]
+        var cell = UITableViewCell()
+        let pantryList = myPantryArray[indexPath.row]
+        cell.textLabel?.text = pantryList
+        return cell
+        
+    }
+    
+    
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     //TitleScreen
     @IBOutlet weak var TapToStartButton: UILabel!
     
@@ -21,27 +45,38 @@ class ViewController: UIViewController {
     @IBOutlet weak var addIngredientButton: UIButton!
     @IBOutlet weak var addIngredientTextField: UITextField!
     
+    
     @IBAction func addIngredient(sender: AnyObject) {
-       let text = addIngredientTextField.text
+        myPantryArray = userDefaults.objectForKey("pantryList") as! [String]
+        let text = addIngredientTextField.text
         myPantryArray.append(text!)
         addIngredientTextField.text="";
         print(myPantryArray)
-       // saveText()
+        
+        userDefaults.setObject(myPantryArray, forKey: "pantryList")
     }
     //MyPantryView
     var myPantryArray:[String] = []
     
     @IBOutlet weak var myPantryTextField: UITextView!
     
-    func saveText() {
-        for i in 0..<myPantryArray.count {
-         myPantryTextField.text = myPantryArray[i]
-        }
+    @IBOutlet weak var clearIngredientListButton: UIButton!
+    @IBAction func clearIngredientList(sender: AnyObject) {
+        myPantryArray = []
+        userDefaults.setObject(myPantryArray, forKey: "pantryList")
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var pantryList: [String] = userDefaults.objectForKey("pantryList") as! [String]
+        if (pantryList == []) {
+            pantryList = []
+            userDefaults.setObject(pantryList, forKey: "pantryList")
+        }
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         let headers = [
             "X-Mashape-Key":"Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx"
@@ -113,8 +148,8 @@ class ViewController: UIViewController {
             alphaAdjustment = (160.0 - 12.0 * adjustmentFactor) / 100.0
         }
         
-//        TapToStartButton.font =  UIFont(name: (TapToStartButton.font?.fontName)!, size: initialFontSize * CGFloat(sizeAdjustment))
-//        TapToStartButton.alpha = CGFloat(alphaAdjustment)
+        //        TapToStartButton.font =  UIFont(name: (TapToStartButton.font?.fontName)!, size: initialFontSize * CGFloat(sizeAdjustment))
+        //        TapToStartButton.alpha = CGFloat(alphaAdjustment)
     }
     
 }
