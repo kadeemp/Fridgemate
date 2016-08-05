@@ -29,9 +29,20 @@ class ViewController: UIViewController{
     
     @IBAction func addIngredient(sender: AnyObject) {
         myPantryArray = userDefaults.objectForKey("pantryList") as! [String]
-        let text = addIngredientTextField.text
-        myPantryArray.append(text!)
+        var text = addIngredientTextField.text
+        
+        if addIngredientTextField.text != "" {
+            for c in (addIngredientTextField.text?.characters)! {
+                if c != " " {
+                    text = text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+                    myPantryArray.append(text!)
+                    break
+                }
+            }
+        }
+        
         addIngredientTextField.text="";
+        
         print(myPantryArray)
         
         userDefaults.setObject(myPantryArray, forKey: "pantryList")
@@ -47,6 +58,9 @@ class ViewController: UIViewController{
         userDefaults.setObject(myPantryArray, forKey: "pantryList")
     //RecipeListView
         var recipeList:[String] = []
+        self.loadView()
+        
+        // load ingredients display, which is now empty
         
     }
     
@@ -61,11 +75,12 @@ class ViewController: UIViewController{
         
         
         // Do any additional setup after loading the view, typically from a nib.
+        let includedIngredients = myPantryArray
         let headers = [
             "X-Mashape-Key":"Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx"
         ]
         let params = [
-            "includeIngredients":"onions, basil, tomato"
+            "includeIngredients":"chicken, basil, onion"
         ]
         
         
@@ -74,7 +89,7 @@ class ViewController: UIViewController{
             case .Success:
                 if let value = response.result.value {
                     let recipeData = JSON(value)
-                    
+//                     var savedRecipeList: [String] = self.userDefaults.objectForKey("savedRecipeList") as! [String]
                     // print(recipeData)
                     let allRecipeData = recipeData["results"].arrayValue
                     var recipeArray: [RecipeData] = []
@@ -83,12 +98,13 @@ class ViewController: UIViewController{
                         let tRecipes = RecipeData(json: allRecipeData[i])
                         // let tRecipes = RecipeData(json:recipeData )
                         recipeArray.append(tRecipes)
-                        
+           // I want to save the given array 
+                        //             userDefaults.setObject(recipeArray, forKey: "savedRecipeList")
                         
                     }
                     print()
                     print("____________________")
-                    //print(recipeArray)
+                    print(recipeArray)
                 }
                 
             case .Failure(let error):

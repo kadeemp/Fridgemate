@@ -337,6 +337,16 @@
                                     <constraint firstAttribute="width" constant="300" id="fa0-iX-7VF"/>
                                     <constraint firstAttribute="height" constant="348" id="xie-lC-IyA"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LE1-Yx-gND">
+                                        <rect key="frame" x="0.0" y="28" width="517" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LE1-Yx-gND" id="HaK-8T-xEv">
+                                            <rect key="frame" x="0.0" y="0.0" width="484" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="qg7-fG-rux" id="btp-EN-kmd"/>
                                 </connections>

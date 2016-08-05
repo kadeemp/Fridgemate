@@ -13,6 +13,7 @@
 		DD0400171D38242C001AA22D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0400151D38242C001AA22D /* Main.storyboard */; };
 		DD0400191D38242C001AA22D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD0400181D38242C001AA22D /* Assets.xcassets */; };
 		DD04001C1D38242C001AA22D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD04001A1D38242C001AA22D /* LaunchScreen.storyboard */; };
+		DD6D45451D53D4A5008CA23F /* myRecipeListClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6D45441D53D4A5008CA23F /* myRecipeListClass.swift */; };
 		DD854B741D512758001A8B6C /* RecipeSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD854B731D512758001A8B6C /* RecipeSetup.swift */; };
 		DD854B761D53B8D2001A8B6C /* myPantryClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD854B751D53B8D1001A8B6C /* myPantryClass.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		DD0400181D38242C001AA22D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD04001B1D38242C001AA22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD04001D1D38242C001AA22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD6D45441D53D4A5008CA23F /* myRecipeListClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myRecipeListClass.swift; sourceTree = "<group>"; };
 		DD854B731D512758001A8B6C /* RecipeSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSetup.swift; sourceTree = "<group>"; };
 		DD854B751D53B8D1001A8B6C /* myPantryClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPantryClass.swift; sourceTree = "<group>"; };
 		E7B6A4593EAB93CA8FB9D9AD /* Pods-Fridgemate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fridgemate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fridgemate/Pods-Fridgemate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				DD0400111D38242C001AA22D /* AppDelegate.swift */,
 				DD0400131D38242C001AA22D /* ViewController.swift */,
 				DD854B751D53B8D1001A8B6C /* myPantryClass.swift */,
+				DD6D45441D53D4A5008CA23F /* myRecipeListClass.swift */,
 				DD854B731D512758001A8B6C /* RecipeSetup.swift */,
 				DD0400151D38242C001AA22D /* Main.storyboard */,
 				DD0400181D38242C001AA22D /* Assets.xcassets */,
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD854B761D53B8D2001A8B6C /* myPantryClass.swift in Sources */,
+				DD6D45451D53D4A5008CA23F /* myRecipeListClass.swift in Sources */,
 				DD854B741D512758001A8B6C /* RecipeSetup.swift in Sources */,
 				DD0400141D38242C001AA22D /* ViewController.swift in Sources */,
 				DD0400121D38242C001AA22D /* AppDelegate.swift in Sources */,
