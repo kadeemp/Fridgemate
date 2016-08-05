@@ -248,7 +248,7 @@
         <!--Current Pantry View -->
         <scene sceneID="ZAb-cK-Rpf">
             <objects>
-                <viewController id="qg7-fG-rux" userLabel="Current Pantry View " customClass="myPantryClass" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qg7-fG-rux" userLabel="Current Pantry View " customClass="myPantryClass" customModule="Fridgemate" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QQe-1g-okx"/>
                         <viewControllerLayoutGuide type="bottom" id="dbz-bY-3t3"/>
@@ -569,7 +569,7 @@
         <!--Recipe List View-->
         <scene sceneID="bbU-aj-9vY">
             <objects>
-                <viewController id="LVa-Pc-kjj" userLabel="Recipe List View" sceneMemberID="viewController">
+                <viewController id="LVa-Pc-kjj" userLabel="Recipe List View" customClass="myRecipeListClass" customModule="Fridgemate" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XAS-SE-qIQ"/>
                         <viewControllerLayoutGuide type="bottom" id="sno-2I-Rjp"/>
@@ -687,10 +687,10 @@ Rosemary
         <image name="fridgemate photo 3.jpeg" width="5184" height="3456"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eER-TS-VEX"/>
-        <segue reference="W8O-DT-TRJ"/>
-        <segue reference="Mkj-rV-T2k"/>
-        <segue reference="SDE-RS-Oxc"/>
+        <segue reference="Ck8-sE-7Nz"/>
         <segue reference="xfd-gZ-aBF"/>
+        <segue reference="Mkj-rV-T2k"/>
+        <segue reference="W8O-DT-TRJ"/>
+        <segue reference="SDE-RS-Oxc"/>
     </inferredMetricsTieBreakers>
 </document>
