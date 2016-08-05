@@ -50,15 +50,14 @@ class ViewController: UIViewController{
     //MyPantryView
     var myPantryArray:[String] = []
     
-    @IBOutlet weak var myPantryTextField: UITextView!
-    
     @IBOutlet weak var clearIngredientListButton: UIButton!
     @IBAction func clearIngredientList(sender: AnyObject) {
         myPantryArray = []
         userDefaults.setObject(myPantryArray, forKey: "pantryList")
+        
     //RecipeListView
         var recipeList:[String] = []
-        self.loadView()
+        
         
         // load ingredients display, which is now empty
         
@@ -80,7 +79,7 @@ class ViewController: UIViewController{
             "X-Mashape-Key":"Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx"
         ]
         let params = [
-            "includeIngredients":"chicken, basil, onion"
+            "includeIngredients":"\(includedIngredients)"
         ]
         
         
@@ -102,17 +101,17 @@ class ViewController: UIViewController{
                         //             userDefaults.setObject(recipeArray, forKey: "savedRecipeList")
                         
                     }
-                    print()
-                    print("____________________")
+//                    print()
+//                    print("____________________")
                     print(recipeArray)
                 }
                 
             case .Failure(let error):
-                print()
-                print()
-                print()
-                print("--------------------------")
-                print(error)
+               print()
+//                print()
+//                print()
+//                print("--------------------------")
+//                print(error)
             }
         }
         
