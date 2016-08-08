@@ -17,7 +17,6 @@ class myPantryClass: ViewController ,UITableViewDataSource {
         //create new cell to occupy index 7 (must have 8 cells at all times)
         if editingStyle == UITableViewCellEditingStyle.Delete {
             let indexToDelete = indexPath.row
-            print("HOW MANY: \(myPantryArray.count)")
             for i in 0..<(myPantryArray.count) {
                 if i == indexToDelete {
                     for j in i..<(myPantryArray.count - 1) {

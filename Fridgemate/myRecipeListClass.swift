@@ -13,12 +13,14 @@ import Alamofire
 
 class myRecipeListClass: ViewController, UITableViewDataSource {
     
-//    var userDefaults = NSUserDefaults.standardUserDefaults()
+
     
-//    userDefaults.setObject(myPantryArray, forKey: "pantryList")
+   // userDefaults.setObject(myPantryArray, forKey: "pantryList")
+    
     var includedIngredients: [String] {
         return userDefaults.objectForKey("pantryList")! as! [String]
     }
+ // let stringRepresentation = includedIngredients.joinWithSeparator(",")
     
     var headers: [String:String] = [:]
     var params: [String:String] = [:]
@@ -26,10 +28,10 @@ class myRecipeListClass: ViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        headers = ["X-Mashape-Key":"Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx"]
+       var headers = ["X-Mashape-Key":"Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx"]
         
-        params = [
-            "includeIngredients":"\(includedIngredients)",
+       var  params = [
+            "includeIngredients":"eggplant, chicken, onions, basil",
             "fillIngredients":"true"
         ]
         

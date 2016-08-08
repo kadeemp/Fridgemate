@@ -54,6 +54,7 @@ class ViewController: UIViewController{
     @IBAction func clearIngredientList(sender: AnyObject) {
         myPantryArray = []
         userDefaults.setObject(myPantryArray, forKey: "pantryList")
+        self.loadView()
         
     //RecipeListView
         var recipeList:[String] = []
@@ -79,7 +80,8 @@ class ViewController: UIViewController{
             "X-Mashape-Key":"Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx"
         ]
         let params = [
-            "includeIngredients":"\(includedIngredients)"
+            "includeIngredients":"onions, tomato, eggplant, basil",
+            "fillIngredients":"true"
         ]
         
         
@@ -91,27 +93,28 @@ class ViewController: UIViewController{
 //                     var savedRecipeList: [String] = self.userDefaults.objectForKey("savedRecipeList") as! [String]
                     // print(recipeData)
                     let allRecipeData = recipeData["results"].arrayValue
-                    var recipeArray: [RecipeData] = []
+                    var recipeArray: [RecipeTitle] = []
                     for i in 0..<allRecipeData.count {
                         //   let allRecipeData = recipeData["results"][i]
-                        let tRecipes = RecipeData(json: allRecipeData[i])
+                        let tRecipes = RecipeTitle(json: allRecipeData[i])
                         // let tRecipes = RecipeData(json:recipeData )
                         recipeArray.append(tRecipes)
+                        
            // I want to save the given array 
                         //             userDefaults.setObject(recipeArray, forKey: "savedRecipeList")
                         
                     }
-//                    print()
-//                    print("____________________")
+                    print()
+                    print("____________________")
                     print(recipeArray)
                 }
                 
             case .Failure(let error):
                print()
-//                print()
-//                print()
-//                print("--------------------------")
-//                print(error)
+                print()
+                print()
+                print("--------------------------")
+                print(error)
             }
         }
         
