@@ -27,7 +27,7 @@ class recipeSearchClass: UIViewController {
     }
     
     /*var headers: [String:String] = [:]
-    var params: [String:String] = [:]*/
+     var params: [String:String] = [:]*/
     
     let headers = [
         "X-Mashape-Key":"Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx"
@@ -82,7 +82,7 @@ class recipeSearchClass: UIViewController {
             "X-Mashape-Key":"Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx"
         ]
         let params = [
-            "includeIngredients":"onions, tomato, eggplant, basil",
+            "includeIngredients":"onions, tomato, chicken, basil",
             "fillIngredients":"true"
         ]
         
@@ -94,28 +94,33 @@ class recipeSearchClass: UIViewController {
                     //                     var savedRecipeList: [String] = self.userDefaults.objectForKey("savedRecipeList") as! [String]
                     // print(recipeData)
                     let allRecipeData = recipeData["results"].arrayValue
-                    var recipeArray: [RecipeTitle] = []
+                    var recipeArray: [String] = []
                     for i in 0..<allRecipeData.count {
+                        
+                        let title = allRecipeData[i]["title"].rawString()
+                        
                         //   let allRecipeData = recipeData["results"][i]
-                        let tRecipes = RecipeTitle(json: allRecipeData[i])
+                       // let tRecipes = RecipeTitle(json: allRecipeData[i])
                         // let tRecipes = RecipeData(json:recipeData )
-                        recipeArray.append(tRecipes)
-                        self.recipeArrayHolder = recipeArray
-                        self.stringRecipeListArray = self.recipeArrayHolder.map{
-                            (String($0))
-                        }
+                        recipeArray.append(title!)
+                      //  self.recipeArrayHolder = recipeArray
+//                        self.stringRecipeListArray = self.recipeArrayHolder.map{
+//                            (String($0))
+//                        }
 //                        for i in  0..<self.stringRecipeListArray.count {
 //                            let currentString = self.stringRecipeListArray[i]
 //                            let newString = currentString.stringByReplacingOccurrencesOfString("RecipeTitle(recipeTitle: ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
 //                            self.stringRecipeListArray2.append(newString)
+//
 //                        }
-                        // I want to save the given array
-                        self.userDefaults.setObject(self.stringRecipeListArray, forKey: "savedRecipeList")
+                        
+                       // I want to save the given array
+                        self.userDefaults.setObject(recipeArray, forKey: "savedRecipeList")
                         
                     }
                     print()
                     print("____________________")
-                    print(self.stringRecipeListArray2)
+                    print(recipeArray)
                 }
                 
             case .Failure(let error):

@@ -11,7 +11,7 @@ import Foundation
 import SwiftyJSON
 import Alamofire
 
-class recipeListClass: recipeSearchClass, UITableViewDataSource {
+class myRecipeListClass: recipeSearchClass, UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -27,7 +27,9 @@ class recipeListClass: recipeSearchClass, UITableViewDataSource {
         let cell = UITableViewCell()
         let recipeList = stringRecipeListArray[indexPath.row]
         cell.textLabel?.text = recipeList
+        
         return cell
+        
         
     }
     // userDefaults.setObject(myPantryArray, forKey: "pantryList")
