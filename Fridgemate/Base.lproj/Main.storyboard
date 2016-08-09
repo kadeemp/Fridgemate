@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Intro View-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Intro View" customClass="ViewController" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fridgemate" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="600" id="2iM-ve-Lde"/>
                                     <constraint firstAttribute="width" constant="600" id="bmL-9E-tkC"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="choppedCarrotsApplesCucumbers">
+                                <state key="normal" backgroundImage="brrrr">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -72,7 +72,9 @@
                             <constraint firstItem="LpM-1q-lpM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2vD-qo-r5H"/>
                             <constraint firstItem="LpM-1q-lpM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7dG-6T-Ghh"/>
                             <constraint firstItem="Jm4-Px-UhX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GCU-jY-9hA"/>
+                            <constraint firstItem="Jm4-Px-UhX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="GMs-QA-s7l"/>
                             <constraint firstItem="JwM-0l-du4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="O6v-0s-fe9"/>
+                            <constraint firstItem="Jm4-Px-UhX" firstAttribute="top" secondItem="JwM-0l-du4" secondAttribute="bottom" constant="170" id="Pp3-Y8-8EI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LpM-1q-lpM" secondAttribute="trailing" constant="-20" id="QzS-ib-fqQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JwM-0l-du4" secondAttribute="trailing" constant="100" id="TYg-OO-Vff"/>
                             <constraint firstItem="JwM-0l-du4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Yxh-Ri-Iyy"/>
@@ -84,16 +86,18 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="TYg-OO-Vff"/>
+                                <exclude reference="GCU-jY-9hA"/>
+                                <exclude reference="jhE-hM-Spl"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="TapToStartButton" destination="Jm4-Px-UhX" id="qbA-6c-pEc"/>
+                        <outlet property="TapToStartLabel" destination="Jm4-Px-UhX" id="WVa-ui-SO4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="415" y="517"/>
+            <point key="canvasLocation" x="207" y="549"/>
         </scene>
         <!--Main Menu View-->
         <scene sceneID="2WK-TI-001">
@@ -335,7 +339,7 @@
                                     <color key="titleColor" red="0.16862745100000001" green="0.28627450980000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clearIngredientList:" destination="qg7-fG-rux" eventType="touchUpInside" id="Aoy-el-ouF"/>
+                                    <action selector="clearIngredientList:" destination="qg7-fG-rux" eventType="touchUpInside" id="eZY-hn-PXL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyO-cU-F8i">
@@ -403,7 +407,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="clearIngredientListButton" destination="4P8-pc-OwM" id="7ZT-RF-Gbv"/>
+                        <outlet property="clearIngredientListButton" destination="4P8-pc-OwM" id="8Vv-SR-NYV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNk-i3-45S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -413,7 +417,7 @@
         <!--Pantry Entry View -->
         <scene sceneID="WYq-Jh-gVp">
             <objects>
-                <viewController id="vMl-v4-0qL" userLabel="Pantry Entry View " customClass="ViewController" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vMl-v4-0qL" userLabel="Pantry Entry View " customClass="pantryEntryClass" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Zs-lK-Jzn"/>
                         <viewControllerLayoutGuide type="bottom" id="Muw-f1-TXU"/>
@@ -466,7 +470,7 @@
                                     <color key="titleColor" red="0.27857305741344929" green="0.34168916392480025" blue="0.41035657051282048" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addIngredient:" destination="vMl-v4-0qL" eventType="touchUpInside" id="f7f-Ow-T3b"/>
+                                    <action selector="addIngredient:" destination="vMl-v4-0qL" eventType="touchUpInside" id="tyX-xe-VyN"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="My Pantry" translatesAutoresizingMaskIntoConstraints="NO" id="oil-ck-cse">
@@ -509,8 +513,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="addIngredientButton" destination="GBN-RR-YFv" id="H0e-3W-2ky"/>
-                        <outlet property="addIngredientTextField" destination="3i0-m2-sIC" id="JiR-HO-ak8"/>
+                        <outlet property="addIngredientTextField" destination="3i0-m2-sIC" id="9lJ-On-2aK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiU-SP-sJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -670,6 +673,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LVa-Pc-kjj" id="ehE-nP-XBO"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.3411764705882353" green="0.0" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
@@ -746,15 +752,15 @@ Rosemary
     </scenes>
     <resources>
         <image name="My Pantry" width="4000" height="2719"/>
-        <image name="choppedCarrotsApplesCucumbers" width="6000" height="3375"/>
+        <image name="brrrr" width="6000" height="3375"/>
         <image name="fridgemate photo 3" width="5184" height="3456"/>
         <image name="vegetable-food-theme-cooking-76306" width="3264" height="2448"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="DPM-qr-2jO"/>
+        <segue reference="SDE-RS-Oxc"/>
+        <segue reference="sZg-cH-8dt"/>
+        <segue reference="Mkj-rV-T2k"/>
         <segue reference="dgN-HJ-7XE"/>
-        <segue reference="sLw-mu-0ei"/>
-        <segue reference="Qml-d2-nvG"/>
-        <segue reference="W8O-DT-TRJ"/>
-        <segue reference="Nfv-OQ-twB"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,59 +10,24 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class ViewController: UIViewController{
+class ViewController: UIViewController {
     
-
-    
+    @IBOutlet weak var TapToStartLabel: UILabel!
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     //TitleScreen
-    @IBOutlet weak var TapToStartButton: UILabel!
+    
+    //MyPantryView
+    var myPantryArray:[String] = []
     
     var counter: Double = 0.0
     var initialFontSize: CGFloat = 30.0
     
-    //PantryEntryView
-    @IBOutlet weak var addIngredientButton: UIButton!
-    @IBOutlet weak var addIngredientTextField: UITextField!
+    // ---------- START HERE ----------
     
+
     
-    @IBAction func addIngredient(sender: AnyObject) {
-        myPantryArray = userDefaults.objectForKey("pantryList") as! [String]
-        var text = addIngredientTextField.text
-        
-        if addIngredientTextField.text != "" {
-            for c in (addIngredientTextField.text?.characters)! {
-                if c != " " {
-                    text = text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-                    myPantryArray.append(text!)
-                    break
-                }
-            }
-        }
-        
-        addIngredientTextField.text="";
-        
-        print(myPantryArray)
-        
-        userDefaults.setObject(myPantryArray, forKey: "pantryList")
-    }
-    //MyPantryView
-    var myPantryArray:[String] = []
-    
-    @IBOutlet weak var clearIngredientListButton: UIButton!
-    @IBAction func clearIngredientList(sender: AnyObject) {
-        myPantryArray = []
-        userDefaults.setObject(myPantryArray, forKey: "pantryList")
-        self.loadView()
-        
-    //RecipeListView
-        var recipeList:[String] = []
-        
-        
-        // load ingredients display, which is now empty
-        
-    }
+    // ---------- STOP HERE ----------
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,27 +37,39 @@ class ViewController: UIViewController{
             userDefaults.setObject(pantryList, forKey: "pantryList")
         }
         
-        
-        
         // Do any additional setup after loading the view, typically from a nib.
         let includedIngredients = myPantryArray
         let headers = [
             "X-Mashape-Key":"Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx"
         ]
         let params = [
-            "includeIngredients":"onions, tomato, eggplant, basil",
+            "ingredients":"onions, tomato, eggplant, basil",
             "fillIngredients":"true"
         ]
         
+//                let urlString = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients"
         
-        let request =  Alamofire.request(.GET,"https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex",headers: headers , parameters: params).validate().responseJSON() { response in
+        let urlString = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=apples%2Cflour%2Csugar&limitLicense=false&number=5&ranking=1"
+        
+        //        let url = NSURL(string: urlString)
+        //        let session = NSURLSession.sharedSession()
+        //        let mutableRequest = NSMutableURLRequest(URL: url!)
+        //        mutableRequest.setValue("Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx", forHTTPHeaderField: "X-Mashape-Key")
+        //
+        //        let task = session.dataTaskWithRequest(mutableRequest, completionHandler: { (data, response, error) -> Void in
+        //            print(NSString(data: data!, encoding: NSUTF8StringEncoding))
+        //        })
+        //        task.resume()
+        
+        _ =  Alamofire.request(.GET,urlString,headers: headers/*, parameters: params*/).validate().responseJSON() { response in
             switch response.result {
             case .Success:
                 if let value = response.result.value {
-                    let recipeData = JSON(value)
-//                     var savedRecipeList: [String] = self.userDefaults.objectForKey("savedRecipeList") as! [String]
+                    let recipeData = JSON(value) // gives a JSON array
+                    //                     var savedRecipeList: [String] = self.userDefaults.objectForKey("savedRecipeList") as! [String]
                     // print(recipeData)
-                    let allRecipeData = recipeData["results"].arrayValue
+                    //                    let allRecipeData = recipeData["results"].arrayValue
+                    let allRecipeData = recipeData.arrayValue
                     var recipeArray: [RecipeTitle] = []
                     for i in 0..<allRecipeData.count {
                         //   let allRecipeData = recipeData["results"][i]
@@ -100,27 +77,24 @@ class ViewController: UIViewController{
                         // let tRecipes = RecipeData(json:recipeData )
                         recipeArray.append(tRecipes)
                         
-           // I want to save the given array 
+                        // I want to save the given array
                         //             userDefaults.setObject(recipeArray, forKey: "savedRecipeList")
                         
                     }
                     print()
                     print("____________________")
+                    print("000")
                     print(recipeArray)
                 }
                 
             case .Failure(let error):
-               print()
+                print()
                 print()
                 print()
                 print("--------------------------")
                 print(error)
             }
         }
-        
-        
-        
-        
         
         let repeatingFunction: Selector = #selector(ViewController.pulseButton)
         _ = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: repeatingFunction, userInfo: nil, repeats: true)
@@ -130,6 +104,7 @@ class ViewController: UIViewController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     func pulseButton() {
         counter += 1.0
         
@@ -149,8 +124,8 @@ class ViewController: UIViewController{
             alphaAdjustment = (160.0 - 12.0 * adjustmentFactor) / 100.0
         }
         
-        //        TapToStartButton.font =  UIFont(name: (TapToStartButton.font?.fontName)!, size: initialFontSize * CGFloat(sizeAdjustment))
-        //        TapToStartButton.alpha = CGFloat(alphaAdjustment)
+        TapToStartLabel.font =  UIFont(name: (TapToStartLabel.font?.fontName)!, size: initialFontSize * CGFloat(sizeAdjustment))
+        TapToStartLabel.alpha = CGFloat(alphaAdjustment)
     }
     
 }
