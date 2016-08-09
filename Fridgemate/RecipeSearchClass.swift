@@ -38,6 +38,7 @@ class recipeSearchClass: UIViewController {
     ]
     var recipeArrayHolder:[RecipeTitle] = []
     var stringRecipeListArray:[String] = []
+    var stringRecipeListArray2:[String] = []
     
     let getURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex"
     
@@ -103,14 +104,18 @@ class recipeSearchClass: UIViewController {
                         self.stringRecipeListArray = self.recipeArrayHolder.map{
                             (String($0))
                         }
-                        
+//                        for i in  0..<self.stringRecipeListArray.count {
+//                            let currentString = self.stringRecipeListArray[i]
+//                            let newString = currentString.stringByReplacingOccurrencesOfString("RecipeTitle(recipeTitle: ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+//                            self.stringRecipeListArray2.append(newString)
+//                        }
                         // I want to save the given array
                         self.userDefaults.setObject(self.stringRecipeListArray, forKey: "savedRecipeList")
                         
                     }
                     print()
                     print("____________________")
-                    print(self.stringRecipeListArray)
+                    print(self.stringRecipeListArray2)
                 }
                 
             case .Failure(let error):

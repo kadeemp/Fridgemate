@@ -11,7 +11,7 @@ import Foundation
 import SwiftyJSON
 import Alamofire
 
-class myRecipeListClass: recipeSearchClass, UITableViewDataSource {
+class recipeListClass: recipeSearchClass, UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
