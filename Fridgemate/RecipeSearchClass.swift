@@ -36,14 +36,14 @@ class recipeSearchClass: UIViewController {
         "ingredients":"onions, tomato, eggplant, basil",
         "fillIngredients":"true"
     ]
-    var recipeArrayHolder:[RecipeTitle] = []
+    var recipeArrayHolder:[String] = []
     var stringRecipeListArray:[String] = []
     var stringRecipeListArray2:[String] = []
     
     let getURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex"
     
     @IBAction func SearchByIngredients(sender: AnyObject) {
-        
+        // = userDefaults.objectForKey("pantryList") as! [String]
         let request =  Alamofire.request(.GET,getURL,headers: headers , parameters: params).validate().responseString() { response in
             switch response.result {
             case .Success:
@@ -78,11 +78,13 @@ class recipeSearchClass: UIViewController {
     }
     
     @IBAction func SearchByPantry(sender: AnyObject) {
+        
+    var includedIngredientsString = userDefaults.objectForKey("includedIngredients")
         let headers = [
             "X-Mashape-Key":"Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx"
         ]
         let params = [
-            "includeIngredients":"onions, tomato, chicken, basil",
+            "includeIngredients":"\(includedIngredientsString)",
             "fillIngredients":"true"
         ]
         
@@ -103,24 +105,17 @@ class recipeSearchClass: UIViewController {
                        // let tRecipes = RecipeTitle(json: allRecipeData[i])
                         // let tRecipes = RecipeData(json:recipeData )
                         recipeArray.append(title!)
-                      //  self.recipeArrayHolder = recipeArray
-//                        self.stringRecipeListArray = self.recipeArrayHolder.map{
-//                            (String($0))
-//                        }
-//                        for i in  0..<self.stringRecipeListArray.count {
-//                            let currentString = self.stringRecipeListArray[i]
-//                            let newString = currentString.stringByReplacingOccurrencesOfString("RecipeTitle(recipeTitle: ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-//                            self.stringRecipeListArray2.append(newString)
-//
-//                        }
                         
-                       // I want to save the given array
-                        self.userDefaults.setObject(recipeArray, forKey: "savedRecipeList")
                         
                     }
+                    
+                    let includedIngredientsString  = recipeArray.joinWithSeparator(",")
+                    self.userDefaults.setObject(includedIngredientsString, forKey:"includedIngredients")
+                    self.userDefaults.setObject(recipeArray, forKey: "savedRecipeList")
+                    
                     print()
                     print("____________________")
-                    print(recipeArray)
+                    print("It worked")
                 }
                 
             case .Failure(let error):

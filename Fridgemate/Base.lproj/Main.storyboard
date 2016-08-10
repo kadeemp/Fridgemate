@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="549"/>
+            <point key="canvasLocation" x="207" y="483"/>
         </scene>
         <!--Main Menu View-->
         <scene sceneID="2WK-TI-001">
@@ -436,7 +436,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNk-i3-45S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298" y="775"/>
+            <point key="canvasLocation" x="510" y="-242"/>
         </scene>
         <!--Pantry Entry View -->
         <scene sceneID="WYq-Jh-gVp">
@@ -542,7 +542,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiU-SP-sJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250" y="-289"/>
+            <point key="canvasLocation" x="1178" y="-297"/>
         </scene>
         <!--Recipe Search View-->
         <scene sceneID="B99-NG-gG7">
@@ -725,11 +725,26 @@
                                     <segue destination="DqJ-Kx-tGg" kind="show" id="6Nx-ND-vx6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYV-F9-hfc">
+                                <rect key="frame" x="126" y="526" width="86" height="30"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.34509803919999998" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="k0D-YE-Uhu"/>
+                                </constraints>
+                                <state key="normal" title="refresh">
+                                    <color key="titleColor" red="0.12941176469999999" green="0.21960784310000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="refresh:" destination="LVa-Pc-kjj" eventType="touchUpInside" id="A1B-Io-kTq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3411764705882353" green="0.0" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yaj-qi-bsX" firstAttribute="leading" secondItem="7GW-Nd-r3t" secondAttribute="leadingMargin" constant="5" id="0Gy-99-ZOF"/>
                             <constraint firstItem="sno-2I-Rjp" firstAttribute="top" secondItem="3Ed-nH-p4I" secondAttribute="bottom" constant="51" id="65c-eX-oHX"/>
+                            <constraint firstItem="XYV-F9-hfc" firstAttribute="leading" secondItem="tnJ-by-FH4" secondAttribute="trailing" constant="20" id="6Nj-eq-gT0"/>
+                            <constraint firstItem="XYV-F9-hfc" firstAttribute="top" secondItem="yaj-qi-bsX" secondAttribute="bottom" constant="43" id="9NH-Vd-kGu"/>
                             <constraint firstItem="sb4-EH-3yT" firstAttribute="leading" secondItem="7GW-Nd-r3t" secondAttribute="leadingMargin" constant="100" id="ACA-KC-R8N"/>
                             <constraint firstItem="yaj-qi-bsX" firstAttribute="trailing" secondItem="3Ed-nH-p4I" secondAttribute="trailing" id="L3k-6o-uku"/>
                             <constraint firstItem="3Ed-nH-p4I" firstAttribute="top" secondItem="yaj-qi-bsX" secondAttribute="bottom" constant="36" id="XEP-x3-xsL"/>
@@ -854,10 +869,10 @@ Rosemary
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dgN-HJ-7XE"/>
-        <segue reference="fMe-LV-2Yu"/>
+        <segue reference="Ck8-sE-7Nz"/>
+        <segue reference="6Nx-ND-vx6"/>
         <segue reference="J7z-Hi-AZb"/>
-        <segue reference="wye-vb-Pwr"/>
-        <segue reference="Mkj-rV-T2k"/>
-        <segue reference="DT8-Me-jPf"/>
+        <segue reference="sZg-cH-8dt"/>
+        <segue reference="SDE-RS-Oxc"/>
     </inferredMetricsTieBreakers>
 </document>

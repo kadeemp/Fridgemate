@@ -13,6 +13,10 @@ import Alamofire
 
 class myRecipeListClass: recipeSearchClass, UITableViewDataSource {
     
+    
+    @IBAction func refresh(sender: AnyObject) {
+        self.loadView()
+    }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
