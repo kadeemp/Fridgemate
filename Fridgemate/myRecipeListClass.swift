@@ -28,6 +28,7 @@ class myRecipeListClass: recipeSearchClass, UITableViewDataSource {
         let recipeList = stringRecipeListArray[indexPath.row]
         cell.textLabel?.text = recipeList
         
+        
         return cell
         
         
