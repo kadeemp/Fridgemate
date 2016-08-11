@@ -39,6 +39,9 @@ class pantryEntryClass:  UIViewController {
                     myPantryArray.append(text!)
                     break
                 }
+                let pantryListString  = myPantryArray.joinWithSeparator(",")
+                self.userDefaults.setObject(pantryListString, forKey:"includedIngredients")
+                
             }
         }
         

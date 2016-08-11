@@ -17,6 +17,7 @@ class recipeSearchClass: UIViewController {
     var myPantryArray: [String] = []
     var userDefaults = NSUserDefaults.standardUserDefaults()
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         myPantryArray = viewController.myPantryArray
@@ -44,27 +45,24 @@ class recipeSearchClass: UIViewController {
     
     @IBAction func SearchByIngredients(sender: AnyObject) {
         // = userDefaults.objectForKey("pantryList") as! [String]
-        let request =  Alamofire.request(.GET,getURL,headers: headers , parameters: params).validate().responseString() { response in
+        _ =  Alamofire.request(.GET,getURL,headers: headers , parameters: params).validate().responseString() { response in
             switch response.result {
             case .Success:
                 if let value = response.result.value {
                     let recipeData = JSON(value)
-                    //                     var savedRecipeList: [String] = self.userDefaults.objectForKey("savedRecipeList") as! [String]
-                    // print(recipeData)
-                    let allRecipeData = recipeData.arrayValue
-                    var recipeArray: [RecipeData] = []
+                    let allRecipeData = recipeData["results"].arrayValue
+                    var recipeTitleArray: [String] = []
                     for i in 0..<allRecipeData.count {
-                        //   let allRecipeData = recipeData["results"][i]
-                        let tRecipes = RecipeData(json: allRecipeData[i])
-                        // let tRecipes = RecipeData(json:recipeData )
-                        recipeArray.append(tRecipes)
-                        // I want to save the given array
-                        //             userDefaults.setObject(recipeArray, forKey: "savedRecipeList")
-                        
+                        let title = allRecipeData[i]["title"].rawString()
+                        recipeTitleArray.append(title!)
                     }
+                    let includedIngredientsString  = recipeTitleArray.joinWithSeparator(",")
+                    self.userDefaults.setObject(includedIngredientsString, forKey:"includedIngredients")
+                    self.userDefaults.setObject(recipeTitleArray, forKey: "savedRecipeList")
+                    
                     print()
                     print("____________________")
-                    print(recipeArray)
+                    print(recipeTitleArray)
                 }
                 
             case .Failure(let error):
@@ -78,8 +76,9 @@ class recipeSearchClass: UIViewController {
     }
     
     @IBAction func SearchByPantry(sender: AnyObject) {
+        //self.recipeListTable.reloadData()
         
-    var includedIngredientsString = userDefaults.objectForKey("includedIngredients")
+        let includedIngredientsString = userDefaults.objectForKey("includedIngredients")
         let headers = [
             "X-Mashape-Key":"Hppop5c3XNmsh6WS0tTXm2LrwB77p10grKmjsnWI5GNJIgOtvx"
         ]
@@ -88,34 +87,25 @@ class recipeSearchClass: UIViewController {
             "fillIngredients":"true"
         ]
         
-        let request =  Alamofire.request(.GET,"https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex",headers: headers , parameters: params).validate().responseJSON() { response in
+        _ =  Alamofire.request(.GET,"https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex",headers: headers , parameters: params).validate().responseJSON() { response in
             switch response.result {
             case .Success:
                 if let value = response.result.value {
                     let recipeData = JSON(value)
-                    //                     var savedRecipeList: [String] = self.userDefaults.objectForKey("savedRecipeList") as! [String]
-                    // print(recipeData)
                     let allRecipeData = recipeData["results"].arrayValue
-                    var recipeArray: [String] = []
+                    var recipeTitleArray: [String] = []
                     for i in 0..<allRecipeData.count {
-                        
                         let title = allRecipeData[i]["title"].rawString()
-                        
-                        //   let allRecipeData = recipeData["results"][i]
-                       // let tRecipes = RecipeTitle(json: allRecipeData[i])
-                        // let tRecipes = RecipeData(json:recipeData )
-                        recipeArray.append(title!)
-                        
-                        
+                        recipeTitleArray.append(title!)
                     }
                     
-                    let includedIngredientsString  = recipeArray.joinWithSeparator(",")
-                    self.userDefaults.setObject(includedIngredientsString, forKey:"includedIngredients")
-                    self.userDefaults.setObject(recipeArray, forKey: "savedRecipeList")
+                    let recipeTitleString  = recipeTitleArray.joinWithSeparator(",")
+                    self.userDefaults.setObject(recipeTitleString, forKey:"recipeTitleList")
+                    self.userDefaults.setObject(recipeTitleArray, forKey: "savedRecipeList")
                     
                     print()
                     print("____________________")
-                    print("It worked")
+                    print(recipeTitleString)
                 }
                 
             case .Failure(let error):

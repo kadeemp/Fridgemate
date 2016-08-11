@@ -355,7 +355,7 @@
                                     <segue destination="Hmw-xH-MXv" kind="show" id="eER-TS-VEX"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kHL-vd-4xf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kHL-vd-4xf">
                                 <rect key="frame" x="6" y="59" width="517" height="348"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -363,12 +363,29 @@
                                     <constraint firstAttribute="height" constant="400" id="xie-lC-IyA"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LE1-Yx-gND">
-                                        <rect key="frame" x="0.0" y="28" width="517" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="LE1-Yx-gND">
+                                        <rect key="frame" x="0.0" y="28" width="517" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LE1-Yx-gND" id="HaK-8T-xEv">
-                                            <rect key="frame" x="0.0" y="0.0" width="484" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="484" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QhK-xQ-ETf">
+                                                    <rect key="frame" x="278" y="11" width="121" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="121" id="aET-1H-aHE"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="" image="My Pantry"/>
+                                                        <segment title=""/>
+                                                        <segment title=""/>
+                                                    </segments>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="QhK-xQ-ETf" secondAttribute="trailing" constant="77" id="3Xd-Vm-Kmd"/>
+                                                <constraint firstItem="QhK-xQ-ETf" firstAttribute="centerY" secondItem="HaK-8T-xEv" secondAttribute="centerY" id="gRZ-zw-YSM"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -754,6 +771,9 @@
                             <constraint firstItem="yaj-qi-bsX" firstAttribute="top" secondItem="sb4-EH-3yT" secondAttribute="bottom" constant="32" id="zjG-5j-MBf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recipeListTable" destination="yaj-qi-bsX" id="KvY-mW-viW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWm-ri-znz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -868,9 +888,9 @@ Rosemary
         <image name="vegetable-food-theme-cooking-76306" width="3264" height="2448"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dgN-HJ-7XE"/>
-        <segue reference="Ck8-sE-7Nz"/>
+        <segue reference="xfd-gZ-aBF"/>
         <segue reference="6Nx-ND-vx6"/>
+        <segue reference="Ck8-sE-7Nz"/>
         <segue reference="J7z-Hi-AZb"/>
         <segue reference="sZg-cH-8dt"/>
         <segue reference="SDE-RS-Oxc"/>
