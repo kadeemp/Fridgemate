@@ -39,16 +39,18 @@ class pantryEntryClass:  UIViewController {
                     myPantryArray.append(text!)
                     break
                 }
-                let pantryListString  = myPantryArray.joinWithSeparator(",")
-                self.userDefaults.setObject(pantryListString, forKey:"includedIngredients")
-                
             }
         }
         
         addIngredientTextField.text="";
         
         print(myPantryArray)
+         userDefaults.setObject(myPantryArray, forKey: "pantryList")
         
-        userDefaults.setObject(myPantryArray, forKey: "pantryList")
+        let pantryListString  = myPantryArray.joinWithSeparator(",")
+        
+        self.userDefaults.setObject(pantryListString, forKey:"includedIngredients")
+        
+  
     }
 }

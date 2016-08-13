@@ -47,9 +47,9 @@ class ViewController: UIViewController {
             "fillIngredients":"true"
         ]
         
-//                let urlString = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients"
+               let urlString = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients"
         
-        let urlString = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=apples%2Cflour%2Csugar&limitLicense=false&number=5&ranking=1"
+//        let urlString = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=apples%2Cflour%2Csugar&limitLicense=false&number=5&ranking=1"
         
         //        let url = NSURL(string: urlString)
         //        let session = NSURLSession.sharedSession()
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         //        })
         //        task.resume()
         
-        _ =  Alamofire.request(.GET,urlString,headers: headers/*, parameters: params*/).validate().responseJSON() { response in
+        _ =  Alamofire.request(.GET,urlString,headers: headers, parameters: params).validate().responseJSON() { response in
             switch response.result {
             case .Success:
                 if let value = response.result.value {

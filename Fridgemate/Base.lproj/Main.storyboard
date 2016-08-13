@@ -29,7 +29,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hmw-xH-MXv" kind="show" id="mgw-yO-dwB"/>
+                                    <segue destination="3F9-zf-xkl" kind="show" id="mgw-yO-dwB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FRIDGEMATE*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwM-0l-du4">
@@ -96,12 +96,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="483"/>
+            <point key="canvasLocation" x="1231" y="587"/>
         </scene>
         <!--Main Menu View-->
         <scene sceneID="2WK-TI-001">
             <objects>
-                <viewController id="Hmw-xH-MXv" userLabel="Main Menu View" sceneMemberID="viewController">
+                <viewController id="Hmw-xH-MXv" userLabel="Main Menu View" customClass="MainMenuViewController" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hoo-A2-fEK"/>
                         <viewControllerLayoutGuide type="bottom" id="pGn-7s-80P"/>
@@ -266,10 +266,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="YZX-v6-hBI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnH-uV-i0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107" y="483"/>
+            <point key="canvasLocation" x="1919" y="483"/>
         </scene>
         <!--Current Pantry View -->
         <scene sceneID="ZAb-cK-Rpf">
@@ -352,10 +353,10 @@
                                     <color key="titleColor" red="0.16862745098039217" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hmw-xH-MXv" kind="show" id="eER-TS-VEX"/>
+                                    <segue destination="3F9-zf-xkl" kind="show" id="eER-TS-VEX"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kHL-vd-4xf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kHL-vd-4xf">
                                 <rect key="frame" x="6" y="59" width="517" height="348"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -363,29 +364,12 @@
                                     <constraint firstAttribute="height" constant="400" id="xie-lC-IyA"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="LE1-Yx-gND">
-                                        <rect key="frame" x="0.0" y="28" width="517" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LE1-Yx-gND">
+                                        <rect key="frame" x="0.0" y="28" width="517" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LE1-Yx-gND" id="HaK-8T-xEv">
-                                            <rect key="frame" x="0.0" y="0.0" width="484" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="484" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QhK-xQ-ETf">
-                                                    <rect key="frame" x="278" y="11" width="121" height="29"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="121" id="aET-1H-aHE"/>
-                                                    </constraints>
-                                                    <segments>
-                                                        <segment title="" image="My Pantry"/>
-                                                        <segment title=""/>
-                                                        <segment title=""/>
-                                                    </segments>
-                                                </segmentedControl>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="QhK-xQ-ETf" secondAttribute="trailing" constant="77" id="3Xd-Vm-Kmd"/>
-                                                <constraint firstItem="QhK-xQ-ETf" firstAttribute="centerY" secondItem="HaK-8T-xEv" secondAttribute="centerY" id="gRZ-zw-YSM"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -453,7 +437,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNk-i3-45S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="510" y="-242"/>
+            <point key="canvasLocation" x="558" y="-166"/>
         </scene>
         <!--Pantry Entry View -->
         <scene sceneID="WYq-Jh-gVp">
@@ -480,7 +464,7 @@
                                     <color key="titleColor" red="0.16862745098039217" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hmw-xH-MXv" kind="show" id="DPM-qr-2jO"/>
+                                    <segue destination="3F9-zf-xkl" kind="show" id="DPM-qr-2jO"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3i0-m2-sIC">
@@ -559,7 +543,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiU-SP-sJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1178" y="-297"/>
+            <point key="canvasLocation" x="1366" y="-205"/>
         </scene>
         <!--Recipe Search View-->
         <scene sceneID="B99-NG-gG7">
@@ -580,7 +564,7 @@
                                     <color key="titleColor" red="0.16862745098039217" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hmw-xH-MXv" kind="show" id="sLw-mu-0ei"/>
+                                    <segue destination="3F9-zf-xkl" kind="show" id="sLw-mu-0ei"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avl-fg-K7r">
@@ -629,7 +613,7 @@
                                     <constraint firstAttribute="height" constant="280" id="xZf-jh-asH"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jIX-ll-Ipn">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ingredients sepereated by commas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jIX-ll-Ipn">
                                 <rect key="frame" x="111" y="347" width="303" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="290" id="Knz-vb-MjI"/>
@@ -668,10 +652,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="searchBarTextField" destination="jIX-ll-Ipn" id="LYC-mq-KER"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDc-NL-wQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1885" y="-242"/>
+            <point key="canvasLocation" x="2137" y="-174"/>
         </scene>
         <!--Recipe List View-->
         <scene sceneID="bbU-aj-9vY">
@@ -685,7 +672,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Recipe List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sb4-EH-3yT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Recipe List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sb4-EH-3yT">
                                 <rect key="frame" x="279" y="20" width="111" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="111" id="NMw-b2-BPL"/>
@@ -704,10 +691,10 @@
                                     <color key="titleColor" red="0.12941176470588237" green="0.2196078431372549" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hmw-xH-MXv" kind="show" id="Ck8-sE-7Nz"/>
+                                    <segue destination="3F9-zf-xkl" kind="show" id="Ck8-sE-7Nz"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yaj-qi-bsX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yaj-qi-bsX">
                                 <rect key="frame" x="152" y="91" width="302" height="392"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -715,20 +702,21 @@
                                     <constraint firstAttribute="height" constant="435" id="u6t-2u-xXj"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Aen-L9-dYO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recipeCell" id="Aen-L9-dYO" customClass="RecipeTableCell" customModule="Fridgemate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="302" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Aen-L9-dYO" id="wdJ-fe-H5f">
-                                            <rect key="frame" x="0.0" y="0.0" width="302" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="269" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="LVa-Pc-kjj" id="ehE-nP-XBO"/>
+                                    <outlet property="delegate" destination="LVa-Pc-kjj" id="KrL-cW-98j"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ed-nH-p4I">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ed-nH-p4I">
                                 <rect key="frame" x="332" y="519" width="122" height="30"/>
                                 <color key="backgroundColor" red="0.68627450980000004" green="0.34509803919999998" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -742,7 +730,7 @@
                                     <segue destination="DqJ-Kx-tGg" kind="show" id="6Nx-ND-vx6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYV-F9-hfc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYV-F9-hfc">
                                 <rect key="frame" x="126" y="526" width="86" height="30"/>
                                 <color key="backgroundColor" red="0.68627450980000004" green="0.34509803919999998" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -772,17 +760,35 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="recipeListTable" destination="yaj-qi-bsX" id="KvY-mW-viW"/>
+                        <segue destination="MxR-qa-Ji1" kind="show" identifier="ShowRecipeInfo" id="ns1-8h-Moq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWm-ri-znz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="458"/>
+            <point key="canvasLocation" x="2695" y="558"/>
+        </scene>
+        <!--Recipe Show View Controller-->
+        <scene sceneID="I3D-XR-SJm">
+            <objects>
+                <viewController id="MxR-qa-Ji1" customClass="RecipeShowViewController" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jvw-eD-ZCd"/>
+                        <viewControllerLayoutGuide type="bottom" id="oxL-eS-lhO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HV3-iT-JwQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7q-jz-6BG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3388" y="458"/>
         </scene>
         <!--Grocery List View-->
         <scene sceneID="3Cb-uZ-N9k">
             <objects>
-                <viewController id="hiT-mv-3Ng" userLabel="Grocery List View" sceneMemberID="viewController">
+                <viewController id="hiT-mv-3Ng" userLabel="Grocery List View" customClass="GroceryListView" customModule="Fridgemate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4kl-AN-Iah"/>
                         <viewControllerLayoutGuide type="bottom" id="YcB-jD-jHa"/>
@@ -798,12 +804,15 @@
                                     <color key="titleColor" red="0.1960784314" green="0.18823529410000001" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hmw-xH-MXv" kind="show" id="fMe-LV-2Yu"/>
+                                    <segue destination="3F9-zf-xkl" kind="show" id="fMe-LV-2Yu"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cpp-hi-tuz">
-                                <rect key="frame" x="20" y="73" width="237" height="429"/>
+                                <rect key="frame" x="20" y="73" width="309" height="429"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="NMy-St-2PG"/>
+                                </constraints>
                                 <string key="text">
 Missing ingredients added:
 
@@ -837,8 +846,8 @@ Rosemary
                                     <segue destination="qg7-fG-rux" kind="show" id="wye-vb-Pwr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9u-3b-2Ow">
-                                <rect key="frame" x="171" y="512" width="86" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9u-3b-2Ow">
+                                <rect key="frame" x="243" y="510" width="86" height="30"/>
                                 <color key="backgroundColor" red="0.85651513010000002" green="0.53521438830000001" blue="0.18974304" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="nvr-Zk-21b"/>
@@ -848,6 +857,19 @@ Rosemary
                                 </state>
                                 <connections>
                                     <segue destination="vMl-v4-0qL" kind="show" id="DT8-Me-jPf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zU3-UG-zWU">
+                                <rect key="frame" x="131" y="512" width="86" height="30"/>
+                                <color key="backgroundColor" red="0.85651513010000002" green="0.53521438830000001" blue="0.18974304" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="emj-HR-Isg"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.1960784314" green="0.18823529410000001" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="hiT-mv-3Ng" eventType="touchUpInside" id="8jB-3g-HJ5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -864,21 +886,45 @@ Rosemary
                             <constraint firstItem="cpp-hi-tuz" firstAttribute="leading" secondItem="rzA-YU-bhM" secondAttribute="leading" id="W0N-vw-5Pd"/>
                             <constraint firstItem="cpp-hi-tuz" firstAttribute="top" secondItem="4kl-AN-Iah" secondAttribute="bottom" constant="53" id="WOD-r2-aJ1"/>
                             <constraint firstItem="FvH-AD-zm3" firstAttribute="top" secondItem="rzA-YU-bhM" secondAttribute="bottom" constant="8" symbolic="YES" id="Zjh-28-48n"/>
+                            <constraint firstItem="zU3-UG-zWU" firstAttribute="baseline" secondItem="rzA-YU-bhM" secondAttribute="baseline" id="cMI-9T-ZLq"/>
                             <constraint firstItem="rzA-YU-bhM" firstAttribute="baseline" secondItem="W9u-3b-2Ow" secondAttribute="baseline" id="fs6-AA-DAc"/>
                             <constraint firstItem="cpp-hi-tuz" firstAttribute="trailing" secondItem="W9u-3b-2Ow" secondAttribute="trailing" id="hYy-yz-Zno"/>
                             <constraint firstItem="rzA-YU-bhM" firstAttribute="trailing" secondItem="FvH-AD-zm3" secondAttribute="trailing" id="iDn-mi-ERc"/>
+                            <constraint firstItem="zU3-UG-zWU" firstAttribute="centerX" secondItem="cpp-hi-tuz" secondAttribute="centerX" id="lVa-vY-0RZ"/>
                             <constraint firstItem="YcB-jD-jHa" firstAttribute="top" secondItem="93H-Cc-i2k" secondAttribute="bottom" constant="548" id="u7F-xw-CXL"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="6Ad-dC-33W"/>
                                 <exclude reference="u7F-xw-CXL"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="GroceryListTextView" destination="cpp-hi-tuz" id="PSS-bw-txa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Et2-br-vXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="515" y="1368"/>
+            <point key="canvasLocation" x="1943" y="1204"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="M6B-CQ-0gx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3F9-zf-xkl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MML-tS-eVu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hmw-xH-MXv" kind="relationship" relationship="rootViewController" id="jh8-WT-1HL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pft-Kp-SMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1107" y="483"/>
         </scene>
     </scenes>
     <resources>
@@ -888,11 +934,11 @@ Rosemary
         <image name="vegetable-food-theme-cooking-76306" width="3264" height="2448"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="wye-vb-Pwr"/>
+        <segue reference="J7z-Hi-AZb"/>
+        <segue reference="fMe-LV-2Yu"/>
+        <segue reference="DT8-Me-jPf"/>
         <segue reference="xfd-gZ-aBF"/>
         <segue reference="6Nx-ND-vx6"/>
-        <segue reference="Ck8-sE-7Nz"/>
-        <segue reference="J7z-Hi-AZb"/>
-        <segue reference="sZg-cH-8dt"/>
-        <segue reference="SDE-RS-Oxc"/>
     </inferredMetricsTieBreakers>
 </document>

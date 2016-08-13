@@ -11,7 +11,7 @@ import Foundation
 import SwiftyJSON
 import Alamofire
 
-class myRecipeListClass: recipeSearchClass, UITableViewDataSource {
+class myRecipeListClass: recipeSearchClass, UITableViewDataSource , UITableViewDelegate{
     
     
     @IBAction func refresh(sender: AnyObject) {
@@ -25,7 +25,9 @@ class myRecipeListClass: recipeSearchClass, UITableViewDataSource {
          stringRecipeListArray = userDefaults.objectForKey("savedRecipeList") as! [String]
         return stringRecipeListArray.count
     }
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("ShowRecipeInfo", sender: self)
+    }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         stringRecipeListArray = userDefaults.objectForKey("savedRecipeList") as! [String]
         let cell = UITableViewCell()
@@ -37,6 +39,8 @@ class myRecipeListClass: recipeSearchClass, UITableViewDataSource {
         
         
     }
+
+    
     // userDefaults.setObject(myPantryArray, forKey: "pantryList")
     
     //    var includedIngredients: [String] {
